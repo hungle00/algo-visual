@@ -1,12 +1,5 @@
 package hanoi_towers;
 
-/**
- * This class represents the Rods consisting of three seperate Rod with disks on top. It involves
- * methods to move the disks from one rod to another in certain patterns.
- * @author EFE ACER
- * @version 1.0
- */
-
 import java.util.Stack;
 import java.util.LinkedList;
 

@@ -1,10 +1,5 @@
 package hanoi_towers;
 
-/**
- * The main framwe establishing the GUI.
- * @author EFE ACER
- * @version 1.0
- */
 
 import java.util.LinkedList;
 import javax.swing.JFrame;

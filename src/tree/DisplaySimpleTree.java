@@ -35,7 +35,7 @@ public class DisplaySimpleTree extends JFrame {
       ///}
       try { //reads in words from a file
         diskInput = new BufferedReader(new InputStreamReader(new FileInputStream(new File("input.txt"))));
-        Scanner input=new Scanner(diskInput);
+        Scanner input = new Scanner(diskInput);
         while (input.hasNext()) { 
           word=input.next();
           word=word.toLowerCase(); // use lower case only

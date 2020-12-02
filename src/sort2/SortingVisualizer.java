@@ -44,7 +44,8 @@ public class SortingVisualizer {
 	}
 
  	public static void startSort() {
-		BubbleSort sort = new BubbleSort(toBeSorted, frame);
+		//BubbleSort sort = new BubbleSort(toBeSorted, frame);
+		SelectionSort sort = new SelectionSort(toBeSorted, frame);
 		sort.run();
 	}
 }

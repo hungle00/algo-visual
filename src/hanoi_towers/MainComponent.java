@@ -1,20 +1,11 @@
 package hanoi_towers;
 
-/**
- * The main component, where the objects are drawn.
- * @author EFE ACER
- * @version 1.0
- */
-
 import javax.swing.JComponent;
-import javax.swing.Timer;
 import java.util.Stack;
 import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.BasicStroke;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainComponent extends JComponent {
     /**

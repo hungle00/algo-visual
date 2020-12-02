@@ -23,11 +23,11 @@ import javax.swing.event.ChangeListener;
 public class VisualizerFrame extends JFrame {
 
 	private final int MAX_SPEED = 200;
-	private final int MIN_SPEED = 1;
-	private final int MAX_SIZE = 200;
+	private final int MIN_SPEED = 10;
+	private final int MAX_SIZE = 100;
 	private final int MIN_SIZE = 5;
-	private final int DEFAULT_SPEED = 50;
-	private final int DEFAULT_SIZE = 50;
+	private final int DEFAULT_SPEED = 100;
+	private final int DEFAULT_SIZE = 10;
 	
 	private final String[] Sorts = {"Bubble", "Selection", "Insertion", "Merge"};
 	
@@ -87,7 +87,7 @@ public class VisualizerFrame extends JFrame {
 			}
 		});
 		
-		size.setMinorTickSpacing(25);
+		size.setMinorTickSpacing(30);
 		size.setMajorTickSpacing(100);
 		size.setPaintTicks(true);
 		
@@ -160,9 +160,9 @@ public class VisualizerFrame extends JFrame {
 		validate();
 	}
 	
-	public void reDrawArray(Integer[] x){
+ 	public void reDrawArray(Integer[] x){
 		reDrawArray(x, -1);
-	}
+	} 
 	
 	public void reDrawArray(Integer[] x, int y){
 		reDrawArray(x, y, -1);
