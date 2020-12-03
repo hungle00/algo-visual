@@ -24,10 +24,10 @@ public class VisualizerFrame extends JFrame {
 
 	private final int MAX_SPEED = 200;
 	private final int MIN_SPEED = 10;
-	private final int MAX_SIZE = 100;
-	private final int MIN_SIZE = 5;
+	//private final int MAX_SIZE = 100;
+	//private final int MIN_SIZE = 5;
 	private final int DEFAULT_SPEED = 100;
-	private final int DEFAULT_SIZE = 10;
+	//private final int DEFAULT_SIZE = 10;
 	
 	private final String[] Sorts = {"Bubble", "Selection", "Insertion", "Merge"};
 	
@@ -40,7 +40,7 @@ public class VisualizerFrame extends JFrame {
 	private JButton start;
 	private JComboBox<String> selection;
 	private JSlider speed;
-	private JSlider size;
+	//private JSlider size;
 	private JLabel speedVal;
 	private JLabel sizeVal;
 	private GridBagConstraints c;
@@ -54,7 +54,7 @@ public class VisualizerFrame extends JFrame {
 		wrapper = new JPanel();
 		selection = new JComboBox<String>();
 		speed = new JSlider(MIN_SPEED, MAX_SPEED, DEFAULT_SPEED);
-		size = new JSlider(MIN_SIZE, MAX_SIZE, DEFAULT_SIZE);
+		//size = new JSlider(MIN_SIZE, MAX_SIZE, DEFAULT_SIZE);
 		speedVal = new JLabel("Speed: 50 ms");
 		sizeVal = new JLabel("Size: 50 values");
 		c = new GridBagConstraints();
@@ -87,22 +87,22 @@ public class VisualizerFrame extends JFrame {
 			}
 		});
 		
-		size.setMinorTickSpacing(30);
-		size.setMajorTickSpacing(100);
-		size.setPaintTicks(true);
+		//size.setMinorTickSpacing(30);
+		//size.setMajorTickSpacing(100);
+		//size.setPaintTicks(true);
 		
-		size.addChangeListener(new ChangeListener() {
+		/*size.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent arg0) {
 				sizeVal.setText(("Size: " + Integer.toString(size.getValue()) + " values"));
 				validate();
 				SortingVisualizer.sortDataCount = size.getValue();
 			}
-		});
+		});*/
 
 		buttonWrapper.add(speedVal);
 		buttonWrapper.add(speed);
 		buttonWrapper.add(sizeVal);
-		buttonWrapper.add(size);
+		//buttonWrapper.add(size);
 		buttonWrapper.add(start);
 		buttonWrapper.add(selection);
 		

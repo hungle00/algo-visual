@@ -28,11 +28,6 @@ public class DisplaySimpleTree extends JFrame {
       MyTree t = new MyTree(); // t is Binary tree we are displaying
       BufferedReader diskInput;
       String word;
-      // read in the words to create the Binary Search Tree
-      //if(args.length!=1){
-    //System.out.println("usage: java DisplayTree textfile");
-      //    System.exit(0);
-      ///}
       try { //reads in words from a file
         diskInput = new BufferedReader(new InputStreamReader(new FileInputStream(new File("input.txt"))));
         Scanner input = new Scanner(diskInput);
@@ -75,7 +70,7 @@ class DisplayPanel extends JPanel {
 
     protected void paintComponent(Graphics g) {
       g.setColor(getBackground()); //colors the window
-      g.fillRect(0, 0, getWidth(), getHeight());
+      g.fillRect(5, 5, getWidth(), getHeight());
       g.setColor(getForeground()); //set color and fonts
       Font MyFont = new Font("SansSerif",Font.PLAIN,10);
       g.setFont(MyFont);
@@ -86,7 +81,7 @@ class DisplayPanel extends JPanel {
       int start=0;
       //  print input string on panel, 150 chars per line
       // if string longer than 23 lines don't print
-      if(t.inputString.length()<23*150){
+      if(t.inputString.length() < 23*150){
            while((t.inputString.length()-start)>150){
               g.drawString(t.inputString.substring(start,start+150),xs,ys);        
               start+=151;
@@ -114,7 +109,6 @@ class DisplayPanel extends JPanel {
         dy = root.ypos * YSCALE +ys;
         String s = (String) root.data; //get the word at this node
         g.drawString(s, dx, dy); // draws the word
-// this draws the lines from a node to its children, if any
         if(root.left!=null){ //draws the line to left child if it exists
           dx2 = root.left.xpos * XSCALE; 
           dy2 = root.left.ypos * YSCALE +ys;

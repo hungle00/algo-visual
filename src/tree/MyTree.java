@@ -1,7 +1,7 @@
 package tree;
 
 public class MyTree {
-    String inputString= new String();
+    String inputString = new String();
     Node root;
     int totalnodes = 0; //keeps track of the inorder number for horiz. scaling 
     int maxheight=0;//keeps track of the depth of the tree for vert. scaling
@@ -12,10 +12,11 @@ public class MyTree {
 
     public int treeHeight(Node t){
 	    if(t==null) return -1;
-        else return 1 + max(treeHeight(t.left),treeHeight(t.right));
+      else return 1 + max(treeHeight(t.left),treeHeight(t.right));
     }
     public int max(int a, int b){
-	    if(a>b) return a; else return b;
+      if(a>b) return a;
+      else return b;
     }
 
     public void computeNodePositions() {

@@ -12,4 +12,4 @@ The workspace contains two folders by default, where:
 ### Algorithms
 - Binary Search Tree  - *read input.txt file and draw tree*
 - Towers of Hanoi
-- Some sort algorithms - *(add in future)*
+- Some sort algorithms - Bubble sort and selection sort *(in progressing)*

@@ -1,12 +1,5 @@
 package hanoi_towers;
 
-/**
- * This class represents a Disk with a certain size.
- * 
- * @author EFE ACER
- * @version 1.0
- */
-
 public class Disk { 
     //Constants 
     protected static final int THICKNESS = 18;

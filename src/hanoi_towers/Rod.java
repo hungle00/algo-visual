@@ -1,11 +1,5 @@
 package hanoi_towers;
 
-/**
- * This class represents the Rod with disks on top. It involves
- * @author EFE ACER
- * @version 1.0
- */
-
 import java.util.Stack;
 
 public class Rod {
