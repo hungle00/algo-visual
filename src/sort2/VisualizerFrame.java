@@ -3,6 +3,7 @@ package sort2;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -16,13 +17,14 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
+import javax.swing.border.LineBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 @SuppressWarnings("serial")
 public class VisualizerFrame extends JFrame {
 
-	private final int MAX_SPEED = 200;
+	private final int MAX_SPEED = 250;
 	private final int MIN_SPEED = 10;
 	//private final int MAX_SIZE = 100;
 	//private final int MIN_SIZE = 5;
@@ -119,7 +121,7 @@ public class VisualizerFrame extends JFrame {
 			public void componentResized(ComponentEvent e) {
 				// Reset the sizeModifier
 				// 90% of the windows height, divided by the size of the sorted array.
-				sizeModifier = (int) ((getHeight()*0.9)/(squarePanels.length));
+				//sizeModifier = (int) ((getHeight()*0.9)/(squarePanels.length));
 			}
 
 			@Override
@@ -150,8 +152,12 @@ public class VisualizerFrame extends JFrame {
 		arrayWrapper.removeAll();
 		// 90% of the windows height, divided by the size of the sorted array.
 		sizeModifier =  (int) ((getHeight()*0.9)/(squarePanels.length));
-		for(int i = 0; i<SortingVisualizer.sortDataCount; i++){
+		for(int i = 0; i < SortingVisualizer.sortDataCount; i++){
 			squarePanels[i] = new JPanel();
+			JLabel text = new JLabel(""+ squares[i]);
+			text.setFont(new Font("Verdana",1,12));
+			squarePanels[i].add(text);
+			squarePanels[i].setBorder(new LineBorder(Color.BLACK));
 			squarePanels[i].setPreferredSize(new Dimension(SortingVisualizer.blockWidth, squares[i]*sizeModifier));
 			squarePanels[i].setBackground(Color.blue);
 			arrayWrapper.add(squarePanels[i], c);
@@ -168,22 +174,20 @@ public class VisualizerFrame extends JFrame {
 		reDrawArray(x, y, -1);
 	}
 	
-	public void reDrawArray(Integer[] x, int y, int z){
-		reDrawArray(x, y, z, -1);
-	}
-	
 	// reDrawArray does similar to preDrawArray except it does not reinitialize the panel array.
-	public void reDrawArray(Integer[] squares, int working, int comparing, int reading){
+	public void reDrawArray(Integer[] squares, int working, int comparing){
 		arrayWrapper.removeAll();
-		for(int i = 0; i<squarePanels.length; i++){
+		for(int i = 0; i < squarePanels.length; i++){
 			squarePanels[i] = new JPanel();
+			JLabel text = new JLabel(""+ squares[i]);
+			text.setFont(new Font("Verdana",1,12));
+			squarePanels[i].add(text);
+			//squarePanels[i].setBorder(new LineBorder(Color.BLACK));
 			squarePanels[i].setPreferredSize(new Dimension(SortingVisualizer.blockWidth, squares[i]*sizeModifier));
 			if (i == working){
 				squarePanels[i].setBackground(Color.green);				
 			}else if(i == comparing){
 				squarePanels[i].setBackground(Color.red);			
-			}else if(i == reading){
-				squarePanels[i].setBackground(Color.yellow);			
 			}else{
 				squarePanels[i].setBackground(Color.blue);
 			}

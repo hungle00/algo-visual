@@ -9,7 +9,7 @@ public class SortingVisualizer {
 	public static VisualizerFrame frame;
 	public static Integer[] toBeSorted;
 	public static boolean isSorting = false;
-	public static int sortDataCount = 50;
+	public static int sortDataCount = 30;
 	public static int sleep = 20;
 	public static int blockWidth;
 	// Stepped depicts whether the values are incremental or random. True is incremental.
@@ -27,12 +27,13 @@ public class SortingVisualizer {
 		// We do not want to reinitialize/reset the array mid sort.
 		if (isSorting) return;
 		toBeSorted = new Integer[sortDataCount];
-		blockWidth = (int) Math.max(Math.floor(500/sortDataCount), 1);
-		for(int i = 0; i< toBeSorted.length; i++){
+		//blockWidth = (int) Math.max(Math.floor(500/sortDataCount), 1);
+		blockWidth = 18;
+		for(int i = 0; i < toBeSorted.length; i++){
 			toBeSorted[i] = (int) (sortDataCount * Math.random());
 		}
 		// If we're using incremental values, they are already sorted. This shuffles it.
-		if (stepped) {
+ 		if (stepped) {
 			ArrayList<Integer> shuffleThis = new ArrayList<>();
 			for (int i = 0; i < toBeSorted.length; i++) {
 				shuffleThis.add(toBeSorted[i]);
@@ -45,7 +46,8 @@ public class SortingVisualizer {
 
  	public static void startSort() {
 		//BubbleSort sort = new BubbleSort(toBeSorted, frame);
-		SelectionSort sort = new SelectionSort(toBeSorted, frame);
+		//SelectionSort sort = new SelectionSort(toBeSorted, frame);
+		InsertionSort sort = new InsertionSort(toBeSorted, frame);
 		sort.run();
 	}
 }
