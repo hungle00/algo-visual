@@ -1,15 +1,18 @@
-## Getting Started
-
-Visualize Algorithms with Java Swing
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Visualize Algorithms with Java Swing
 
 ### Algorithms
 - Binary Search Tree  - *read input.txt file and draw tree*
 - Towers of Hanoi
-- Some sort algorithms - Bubble sort and selection sort *(in progressing)*
+- Some sorting algorithms - Bubble sort and selection sort *(in progressing)*
+
+### Main menu
+![Main menu](/images/a.png)
+
+### Towers of Hanoi
+![Towers of Hanoi](/images/b.png)
+
+### Binary Search Tree
+![Binary search tree](/images/c.png)
+
+### Sorting algorithms
+![Sorting](/images/d.png)

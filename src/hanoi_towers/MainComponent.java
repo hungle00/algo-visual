@@ -8,9 +8,7 @@ import java.awt.Graphics2D;
 import java.awt.BasicStroke;
 
 public class MainComponent extends JComponent {
-    /**
-     *
-     */
+
     private static final long serialVersionUID = 1L;
     // Constants
     private static final Color[] COLOR_ARRAY = {Color.BLUE, Color.CYAN, Color.YELLOW, Color.GREEN, Color.ORANGE, Color.RED};
@@ -22,8 +20,7 @@ public class MainComponent extends JComponent {
     private static final int SIDE_GAP = 75;
     private static final int THICKNESS = 3;
     private static final int STRING_ADJUST = 30;
-    
-    //Instance Variabless
+
     private Rods rods;
     
     /**

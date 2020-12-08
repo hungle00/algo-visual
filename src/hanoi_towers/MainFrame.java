@@ -1,6 +1,5 @@
 package hanoi_towers;
 
-
 import java.util.LinkedList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,9 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.Dimension;
 
 public class MainFrame extends JFrame {    
-    /**
-     *
-     */
+
     private static final long serialVersionUID = 1L;
     // Constants
     private static final int FRAME_WIDTH = 600;
@@ -25,7 +22,7 @@ public class MainFrame extends JFrame {
     private static final int RODS_HEIGHT = 400;
     private static final int INITIAL_NUMBER_OF_DISKS = 4;
     private static final int INITIAL_ROD = 0;
-    private static final String TITLE = "Towers of Hanoi by EFE ACER";
+    private static final String TITLE = "Towers of Hanoi";
     private static final String DISK_NUMBER_LABEL = "Select the number of disks:";
     private static final int DELAY = 1000;
     

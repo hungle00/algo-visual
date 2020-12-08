@@ -37,6 +37,7 @@ public class DisplaySimpleTree extends JFrame {
           t.root = t.insert(t.root, word);  //insert word into Binary Search Tree
           t.inputString= t.inputString + " " + word; // add word to input string
         }
+        input.close();
       }
       catch (IOException e) {
           System.out.println("io exception");
@@ -98,7 +99,7 @@ class DisplayPanel extends JPanel {
 
     public void drawTree(Graphics g, Node root) {//actually draws the tree
       Graphics2D g2D = (Graphics2D) g;
-      g2D.setStroke(new BasicStroke(3));
+      g2D.setStroke(new BasicStroke(2));
       g.setColor(Color.GRAY);
       int dx, dy, dx2, dy2;
       int SCREEN_WIDTH=1000; //screen size for panel
@@ -106,7 +107,6 @@ class DisplayPanel extends JPanel {
       int XSCALE, YSCALE;  
       XSCALE=(SCREEN_WIDTH)/t.totalnodes; //scale x by total nodes in tree
       YSCALE=(SCREEN_HEIGHT-ys)/(t.maxheight+1); //scale y by tree height
-      System.out.println(xs);
       if (root != null) { // inorder traversal to draw each node
         drawTree(g, root.left); // do left side of inorder traversal 
         dx = root.xpos * XSCALE; // get x,y coords., and scale them 
