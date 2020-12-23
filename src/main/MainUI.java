@@ -58,7 +58,7 @@ public class MainUI extends javax.swing.JFrame {
             }
         });
 
-        treeButton.setText(" Binary Tree ");
+        treeButton.setText(" Binary Search Tree ");
         treeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 treeButtonActionPerformed(evt);
@@ -110,10 +110,10 @@ public class MainUI extends javax.swing.JFrame {
         VisualizerFrame frame = new VisualizerFrame();
         SortingVisualizer.resetArray();
         frame.setLocationRelativeTo(null);
-        SortingVisualizer.startSort();
+        //SortingVisualizer.startSort();
 		frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        frame.setTitle("Binary tree");
+        frame.setTitle("Sorting algorithms");
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         
@@ -123,7 +123,7 @@ public class MainUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         DisplaySimpleTree frame = new DisplaySimpleTree();//get a display panel
         frame.setVisible(true); //show the display
-        frame.setTitle("Binary tree");
+        frame.setTitle("Binary search tree");
         //set default close operation
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         

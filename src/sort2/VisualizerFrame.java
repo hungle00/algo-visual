@@ -25,7 +25,7 @@ import javax.swing.event.ChangeListener;
 public class VisualizerFrame extends JFrame {
 
 	private final int MAX_SPEED = 250;
-	private final int MIN_SPEED = 10;
+	private final int MIN_SPEED = 20;
 	//private final int MAX_SIZE = 100;
 	//private final int MIN_SIZE = 5;
 	private final int DEFAULT_SPEED = 100;
@@ -58,7 +58,7 @@ public class VisualizerFrame extends JFrame {
 		speed = new JSlider(MIN_SPEED, MAX_SPEED, DEFAULT_SPEED);
 		//size = new JSlider(MIN_SIZE, MAX_SIZE, DEFAULT_SIZE);
 		speedVal = new JLabel("Speed: 50 ms");
-		sizeVal = new JLabel("Size: 50 values");
+		sizeVal = new JLabel("Size: 30 values");
 		c = new GridBagConstraints();
 		
 		for(String s : Sorts) selection.addItem(s);
@@ -71,8 +71,7 @@ public class VisualizerFrame extends JFrame {
 		
 		start.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//SortingVisualizer.startSort((String) selection.getSelectedItem());
-				//SortingVisualizer.startSort();
+				SortingVisualizer.startSort((String) selection.getSelectedItem());
 			}
 		});
 		

@@ -1,6 +1,6 @@
 package sort2;
 
-public class InsertionSort{
+public class InsertionSort implements Runnable {
 	
 	private Integer[] toBeSorted;
 	private VisualizerFrame frame;

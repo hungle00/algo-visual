@@ -1,7 +1,7 @@
 package sort2;
 
 
-public class SelectionSort{
+public class SelectionSort implements Runnable {
 	
 	private Integer[] toBeSorted;
 	private VisualizerFrame frame;

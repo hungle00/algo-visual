@@ -6,6 +6,8 @@ import java.util.Collections;
 
 public class SortingVisualizer {
 
+	private static Thread sortingThread;
+
 	public static VisualizerFrame frame;
 	public static Integer[] toBeSorted;
 	public static boolean isSorting = false;
@@ -19,7 +21,7 @@ public class SortingVisualizer {
 		frame = new VisualizerFrame();
 		resetArray();
 		frame.setLocationRelativeTo(null);
-		startSort();
+		//startSort();
 	}
 	
 	public static void resetArray(){
@@ -44,10 +46,41 @@ public class SortingVisualizer {
 		frame.preDrawArray(toBeSorted);
 	}
 
- 	public static void startSort() {
+ 	/*public static void startSort() {
 		BubbleSort sort = new BubbleSort(toBeSorted, frame);
 		//SelectionSort sort = new SelectionSort(toBeSorted, frame);
 		//InsertionSort sort = new InsertionSort(toBeSorted, frame);
 		sort.run();
+	}*/
+	public static void startSort(String type){
+		
+		if (sortingThread == null || !isSorting){
+			
+			resetArray();
+			
+			isSorting = true;
+
+			switch(type){
+			case "Bubble":
+				sortingThread = new Thread(new BubbleSort(toBeSorted, frame));
+				break;
+
+			case "Selection":
+				sortingThread = new Thread(new SelectionSort(toBeSorted, frame));
+				break;
+
+			case "Insertion":
+				sortingThread = new Thread(new InsertionSort(toBeSorted, frame));
+				break;
+				
+			default:
+				isSorting = false;
+				return;
+			}
+			
+			sortingThread.start();
+			
+		}
+		
 	}
 }

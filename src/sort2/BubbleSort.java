@@ -1,10 +1,10 @@
 package sort2;
 
-public class BubbleSort {
+public class BubbleSort implements Runnable {
 	
 	private Integer[] toBeSorted;
 	private VisualizerFrame frame;
-	
+
 	public BubbleSort(Integer[] toBeSorted, VisualizerFrame frame) {
 		this.toBeSorted = toBeSorted;
 		this.frame = frame;

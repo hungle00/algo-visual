@@ -11,12 +11,13 @@ public class MyTree {
     }
 
     public int treeHeight(Node t){
-	    if(t==null) return -1;
-      else return 1 + max(treeHeight(t.left),treeHeight(t.right));
+	      if(t==null) return -1;
+        else return 1 + max(treeHeight(t.left),treeHeight(t.right));
     }
+
     public int max(int a, int b){
-      if(a>b) return a;
-      else return b;
+        if(a>b) return a;
+        else return b;
     }
 
     public void computeNodePositions() {
@@ -33,10 +34,9 @@ public class MyTree {
         t.ypos = depth; // mark y coord as depth
         inorder_traversal(t.right, depth + 1);
       }
-}
+    }
 
-/* below is standard Binary Search tree insert code, creates the tree */
-
+    /* below is standard Binary Search tree insert code, creates the tree */
     public Node insert(Node root, String s) { // Binary Search tree insert
       if (root == null) {
         root = new Node(s, null, null);
@@ -45,10 +45,12 @@ public class MyTree {
       else {
         if (s.compareTo((String)(root.data)) == 0) {
            return root;  /* duplicate word  found - do nothing */
-        } else   if (s.compareTo((String)(root.data)) < 0)
-                     root.left = insert(root.left, s);
-                 else
-                     root.right = insert(root.right, s);
+        } else {
+            if (s.compareTo((String)(root.data)) < 0)
+                root.left = insert(root.left, s);
+            else
+                root.right = insert(root.right, s);
+        }
         return root;
       }
     }

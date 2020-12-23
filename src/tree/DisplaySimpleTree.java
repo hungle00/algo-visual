@@ -13,7 +13,6 @@ public class DisplaySimpleTree extends JFrame {
     JScrollPane scrollpane;
     DisplayPanel panel;
   
-
     public DisplaySimpleTree() {
         MyTree t = buildTree();
         panel = new DisplayPanel(t);
@@ -48,6 +47,7 @@ public class DisplaySimpleTree extends JFrame {
       
       return t;
     }
+
     public static void main(String[] args) {
 
       DisplaySimpleTree dt = new DisplaySimpleTree();//get a display panel

@@ -45,7 +45,7 @@ public class MainFrame extends JFrame {
         createComponents();
         setTitle(TITLE);
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setVisible(true);
     }
